@@ -7,18 +7,11 @@ class Person
     @parent_permission = parent_permission
   end
 
-  # define getter for @name
-  attr_accessor :name
-
-  # define setter for @name
-
-  # define getter for @age
-  attr_accessor :age
-
-  # define getter for age
+  # define getter&setter for @name & @age
+  attr_accessor :name, :age
 
   def can_use_services?
-    if (age >= 18) || @parent_permission
+    if of_age? || @parent_permission
       true
     else
       false
