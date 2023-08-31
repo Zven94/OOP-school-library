@@ -1,11 +1,12 @@
-require_relative 'person'
-
 # creating a Person subclass: student
 class Student < Person
+  # define getter&setter for @name and @classroom
+  attr_accessor :name, :classroom
+
   # Initializes a Student object with the given classroom
-  def initialize(age, classroom, name = 'Unknown', parent_permission: true)
+  def initialize(age, _classroom, name = 'Unknown', parent_permission: true)
     super(name, age, parent_permission)
-    @classroom = classroom
+    @classroom = nil
   end
 
   def play_hooky

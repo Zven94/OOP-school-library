@@ -21,6 +21,7 @@ class Person < Nameable
 
   # define getter&setter for @name & @age
   attr_accessor :name, :age
+  attr_reader :rental
 
   def can_use_services?
     if of_age? || @parent_permission
