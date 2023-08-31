@@ -6,4 +6,5 @@ class Book
     @title = title
     @author = author
     @rental
+  end
 end
