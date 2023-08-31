@@ -1,10 +1,22 @@
+# create a Nameable class
+class Nameable
+  def correct_name
+    raise NotImplementedError
+  end
+end
+
 # creating a Person class
-class Person
+class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
     @id = rand(1000..9999)
     @age = age
     @name = name
     @parent_permission = parent_permission
+  end
+
+  def correct_name
+    @name
   end
 
   # define getter&setter for @name & @age
@@ -28,4 +40,25 @@ class Person
   end
 end
 
-Person.new(26, 'Nico', true)
+class Decorator < Nameable
+  def initialize(nameable)
+    @nameable = nameable
+  end
+
+  def correct_name
+    @nameable.correct_name
+  end
+end
+
+class CapitalizeDecorator < Decorator
+  def correct_name
+    @nameable.correct_name.upcase
+  end
+end
+
+class TrimmerDecorator < Decorator
+  def correct_name
+    original_name = @nameable.correct_name
+    original_name.length > 10 ? original_name[0..9] : original_name
+  end
+end
