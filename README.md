@@ -117,8 +117,8 @@ Remember to replace `/path/to/your/program/files` with the actual path to the di
 
 ## Authors <a name="authors"></a>
 👤 **Nicolas Bolañez**
-- GitHub: [@Nico](https://github.com/Zven9)
-- LinkedIn: [@Nico](https://www.linkedin.com/in/nico-emiliano/)
+- GitHub: [@Nico](https://github.com/Zven94)
+- LinkedIn: [@Nico](https://www.linkedin.com/in/nicolas-emiliano/)
 
 
 ## ❓ FAQ <a name="faq"></a>
@@ -139,7 +139,7 @@ A: For more information about Ruby, its features, and its community, visit the o
 
 
 ## 🤝 Contributing <a name="contributing"></a>
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Zven94/OOP-school-library/).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Zven94/OOP-school-library/issues/).
 
 ##  Show your support <a name="support"></a>
 If you find this project helpful, consider giving it a ⭐️ to show your support!
@@ -149,6 +149,6 @@ I would like to thank Microverse and all my peers and colleagues at Microverse f
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](MIT.md) licensed.
+This project is [MIT](https://github.com/Zven94/OOP-school-library/blob/dev-library/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
