@@ -45,7 +45,7 @@ class Person < Nameable
 
     false
   end
-end
+
 
 class Decorator < Nameable
   def initialize(nameable)

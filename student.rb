@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # creating a Person subclass: student
 class Student < Person
   # define getter&setter for @name and @classroom

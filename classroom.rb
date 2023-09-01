@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # define Classroom class
 class Classroom
   # define getter&setter for @label
