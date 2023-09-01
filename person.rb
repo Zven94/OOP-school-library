@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # create a Nameable class
 class Nameable
   def correct_name
@@ -25,27 +23,26 @@ class Person < Nameable
   end
 
   add_rental(book, date)
-    rental = Rental.new(self, book, date)
-    @rental << rental
-  end
+  rental = Rental.new(self, book, date)
+  @rental << rental
+end
 
-  def can_use_services?
-    if of_age? || @parent_permission
-      true
-    else
-      false
-    end
+def can_use_services?
+  if of_age? || @parent_permission
+    true
+  else
+    false
   end
+end
 
   # private method section
   private
 
-  def of_age?
-    return true if @age >= 18
+def of_age?
+  return true if @age >= 18
 
-    false
-  end
-
+  false
+end
 
 class Decorator < Nameable
   def initialize(nameable)
