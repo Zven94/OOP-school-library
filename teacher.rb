@@ -1,7 +1,7 @@
 # creating a Person subclass: teacher
 class Teacher < Person
   def initialize(age, specialization, name = 'Unknown', parent_permission: true)
-    super(name, age, parent_permission)
+    super(name, age, parent_permission: parent_permission)
     @specialization = specialization
   end
 

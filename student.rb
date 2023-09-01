@@ -5,15 +5,15 @@ class Student < Person
   attr_reader :classroom
 
   # Initializes a Student object with the given classroom
-  def initialize(age, classroom, name = 'Unknown', parent_permission: true)
-    super(name, age, parent_permission)
-    self.classroom = classroom
+  def initialize(age, classroom = nil, name = 'Unknown', parent_permission: true)
+    super(name, age, parent_permission: parent_permission)
+    self.classroom = classroom if classroom
   end
 
   def classroom=(classroom)
     @classroom = classroom
     # ask if classroom already have the student, otherwise it includ it
-    classroom.students.push(self) unless classroom.students.include?(self)
+    classroom.student.push(self) unless classroom.student.include?(self)
   end
 
   def play_hooky

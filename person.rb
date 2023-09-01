@@ -16,32 +16,34 @@ class Person < Nameable
     @age = age
     @name = name
     @parent_permission = parent_permission
+    @rental
   end
 
   def correct_name
     @name
   end
 
-  add_rental(book, date)
-  rental = Rental.new(self, book, date)
+  def add_rental(book, date)
+   rental = Rental.new(self, book, date)
   @rental << rental
-end
-
-def can_use_services?
-  if of_age? || @parent_permission
-    true
-  else
-    false
   end
-end
+
+  def can_use_services?
+    if of_age? || @parent_permission
+      true
+    else
+      false
+    end
+  end
 
   # private method section
   private
 
-def of_age?
-  return true if @age >= 18
+  def of_age?
+    return true if @age >= 18
 
-  false
+    false
+  end
 end
 
 class Decorator < Nameable
