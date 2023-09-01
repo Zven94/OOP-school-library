@@ -5,7 +5,7 @@ require_relative 'book'
 require_relative 'rental'
 require_relative 'teacher'
 
-class App 
+class App
   def initialize
     @person = []
     @book = []
@@ -28,7 +28,7 @@ class App
 
   # create student
 
-  def create_student(name, age, parent_permission)
+  def create_student(name, age, _parent_permission)
     @person << Student.new(age, nil, name, parent_permission: true)
   end
 
