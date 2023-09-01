@@ -7,6 +7,9 @@ end
 
 # creating a Person class
 class Person < Nameable
+  # define getter&setter for @name & @age
+  attr_accessor :name, :age, :rental
+
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
     @id = rand(1000..9999)
@@ -19,9 +22,10 @@ class Person < Nameable
     @name
   end
 
-  # define getter&setter for @name & @age
-  attr_accessor :name, :age
-  attr_reader :rental
+  add_rental(book, date)
+    rental = Rental.new(self, book, date)
+    @rental << rental
+  end
 
   def can_use_services?
     if of_age? || @parent_permission
