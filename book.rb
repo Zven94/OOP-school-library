@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # define Book class
 class Book
   attr_accessor :title, :author
@@ -13,5 +15,4 @@ class Book
     rental = Rental.new(date, self, person)
     @rentals << rental  # Add the new rental to the rentals array
   end
-
 end

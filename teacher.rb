@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # creating a Person subclass: teacher
 class Teacher < Person
   def initialize(age, specialization, name = 'Unknown', parent_permission: true)

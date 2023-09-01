@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # creating a Person subclass: student
 class Student < Person
   # define getter&setter for @name and @classroom
@@ -9,10 +11,11 @@ class Student < Person
     super(name, age, parent_permission)
     self.classroom = classroom
   end
-  
+
   def classroom=(classroom)
     @classroom = classroom
-    classroom.students.push(self) unless classroom.students.include?(self) # ask if classroom already have the student, otherwise it includ it
+    # ask if classroom already have the student, otherwise it includ it
+    classroom.students.push(self) unless classroom.students.include?(self)
   end
 
   def play_hooky
