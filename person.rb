@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # create a Nameable class
 class Nameable
   def correct_name
@@ -8,7 +10,7 @@ end
 # creating a Person class
 class Person < Nameable
   # define getter&setter for @name & @age
-  attr_accessor :name, :age, :rental
+  attr_accessor :name, :age, :rental, :id
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()

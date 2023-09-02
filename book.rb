@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
 # define Book class
+require_relative 'rental'
+
 class Book
   attr_accessor :title, :author
-  attr_reader :rental
+  attr_reader :rentals
 
   def initialize(title, author)
+    @id = Random.rand(1..1000)
     @title = title
     @author = author
     @rentals = []
@@ -11,6 +16,6 @@ class Book
 
   def add_rental(person, date)
     rental = Rental.new(date, self, person)
-    @rentals << rental # Add the new rental to the rentals array
+    @rentals << rental
   end
 end
