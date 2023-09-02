@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # define Book class
 require_relative 'rental'
 

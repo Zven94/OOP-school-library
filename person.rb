@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # create a Nameable class
 class Nameable
   def correct_name
