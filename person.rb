@@ -8,7 +8,7 @@ end
 # creating a Person class
 class Person < Nameable
   # define getter&setter for @name & @age
-  attr_accessor :name, :age, :rental
+  attr_accessor :name, :age, :rental, :id
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -22,26 +22,27 @@ class Person < Nameable
     @name
   end
 
-  add_rental(book, date)
-  rental = Rental.new(self, book, date)
-  @rental << rental
-end
-
-def can_use_services?
-  if of_age? || @parent_permission
-    true
-  else
-    false
+  def add_rental(book, date)
+    rental = Rental.new(self, book, date)
+    @rental << rental
   end
-end
+
+  def can_use_services?
+    if of_age? || @parent_permission
+      true
+    else
+      false
+    end
+  end
 
   # private method section
   private
 
-def of_age?
-  return true if @age >= 18
+  def of_age?
+    return true if @age >= 18
 
-  false
+    false
+  end
 end
 
 class Decorator < Nameable

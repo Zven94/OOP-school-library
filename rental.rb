@@ -4,11 +4,10 @@ class Rental
 
   def initialize(date, person, book)
     @date = date
-
     @person = person
-    person.rental << self
-
     @book = book
-    book.rental << self
+
+    person.rentals << self if person.respond_to?(:rentals)
+    book.rentals << self if book.respond_to?(:rentals)
   end
 end
