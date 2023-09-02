@@ -7,7 +7,7 @@ class Rental
     @person = person
     @book = book
 
-    person.rentals << self
-    book.rentals << self
+    person.rentals << self if person.respond_to?(:rentals)
+    book.rentals << self if book.respond_to?(:rentals)
   end
 end
